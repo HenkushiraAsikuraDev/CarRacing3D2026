@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Toyota Supra Racing 3D</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; font-family: sans-serif; }
+        #ui { position: absolute; top: 20px; left: 20px; color: white; pointer-events: none; }
+        #controls { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 10px; }
+        .btn { width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; pointer-events: auto; user-select: none; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <h1>SUPRA SPEED</h1>
+        <p>Tốc độ: <span id="speed">0</span> km/h</p>
+    </div>
+    
+    <div id="controls">
+        <div class="btn" id="left">L</div>
+        <div class="btn" id="gas">GAS</div>
+        <div class="btn" id="right">R</div>
+    </div>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
